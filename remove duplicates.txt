@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+    a := []int{1, 2, 3, 2, 4, 1, 5}
+    n := len(a)
+
+    for i := 0; i < n; i++ {
+        for j := i + 1; j < n; j++ {
+            if a[i] == a[j] {
+                for k := j; k < n-1; k++ {
+                    a[k] = a[k+1]
+                }
+                n--
+                j--
+            }
+        }
+    }
+
+    fmt.Println(a[:n])
+}
+
+// Output:
+// [1 2 3 4 5]

@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func main() {
+    var n int
+    fmt.Scan(&n)
+
+    for i := 1; i <= n; i++ {
+        for j := 1; j <= n-i; j++ {
+            fmt.Print(" ")
+        }
+
+        for j := 1; j <= i; j++ {
+            fmt.Print(j, " ")
+        }
+
+        fmt.Println()
+    }
+}
+
+// Output:
+// Input: 5
+//     1
+//    1 2
+//   1 2 3
+//  1 2 3 4
+// 1 2 3 4 5

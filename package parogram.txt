@@ -1,0 +1,36 @@
+//student/student
+
+package student
+
+type Student struct {
+    Name string
+    Age  int
+}
+
+func (s Student) Display() {
+    println("Name:", s.Name)
+    println("Age:", s.Age)
+}
+
+// main.go
+package main
+
+import (
+    "fmt"
+    "example/student"
+)
+
+func main() {
+    s := student.Student{
+        Name: "Swapnika",
+        Age:  20,
+    }
+
+    fmt.Println("Student Details:")
+    s.Display()
+}
+
+// Output:
+// Student Details:
+// Name: Swapnika
+// Age: 20

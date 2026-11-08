@@ -1,0 +1,29 @@
+package main
+
+import (
+    "fmt"
+    "sort"
+)
+
+func main() {
+    nums := []int{5, 2, 8, 1, 4}
+    words := []string{"Mango", "Apple", "Banana", "Orange"}
+
+    sort.Ints(nums)
+    fmt.Println("Integer Sorted:", nums)
+
+    sort.Sort(sort.Reverse(sort.IntSlice(nums)))
+    fmt.Println("Integer Reverse Sorted:", nums)
+
+    sort.Strings(words)
+    fmt.Println("String Sorted:", words)
+
+    sort.Sort(sort.Reverse(sort.StringSlice(words)))
+    fmt.Println("String Reverse Sorted:", words)
+}
+
+// Output:
+// Integer Sorted: [1 2 4 5 8]
+// Integer Reverse Sorted: [8 5 4 2 1]
+// String Sorted: [Apple Banana Mango Orange]
+// String Reverse Sorted: [Orange Mango Banana Apple]

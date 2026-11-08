@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main() {
+    arr := [5]int{10, 20, 30, 40, 50}
+    sum := 0
+
+    for i := 0; i < len(arr); i++ {
+        sum += arr[i]
+    }
+
+    avg := float64(sum) / float64(len(arr))
+
+    fmt.Println("Array:", arr)
+    fmt.Println("Sum =", sum)
+    fmt.Println("Average =", avg)
+}
+
+// Output:
+// Array: [10 20 30 40 50]
+// Sum = 150
+// Average = 30

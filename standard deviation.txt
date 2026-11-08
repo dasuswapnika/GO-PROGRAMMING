@@ -1,0 +1,32 @@
+package main
+
+import (
+    "fmt"
+    "math"
+)
+
+func main() {
+    n := 5
+    a := []float64{10, 20, 30, 40, 50}
+
+    var sum, variance float64
+
+    for _, v := range a {
+        sum += v
+    }
+
+    mean := sum / float64(n)
+
+    for _, v := range a {
+        variance += math.Pow(v-mean, 2)
+    }
+
+    sd := math.Sqrt(variance / float64(n))
+
+    fmt.Println("Mean =", mean)
+    fmt.Println("Standard Deviation =", sd)
+}
+
+// Output:
+// Mean = 30
+// Standard Deviation = 14.142135623730951

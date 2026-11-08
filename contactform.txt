@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func main() {
+    var name, phone, email string
+    var age int
+
+    fmt.Print("Enter Name: ")
+    fmt.Scan(&name)
+
+    fmt.Print("Enter Age: ")
+    fmt.Scan(&age)
+
+    fmt.Print("Enter Phone Number: ")
+    fmt.Scan(&phone)
+
+    fmt.Print("Enter Email: ")
+    fmt.Scan(&email)
+
+    fmt.Println("\nContact Form Details")
+    fmt.Println("Name:", name)
+    fmt.Println("Age:", age)
+    fmt.Println("Phone Number:", phone)
+    fmt.Println("Email:", email)
+}
