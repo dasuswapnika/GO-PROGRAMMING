@@ -34,3 +34,12 @@ func main() {
 // Student Details:
 // Name: Swapnika
 // Age: 20
+
+//go mod
+go mod init student
+go run .
+
+program
+module student
+
+go 1.27.3
